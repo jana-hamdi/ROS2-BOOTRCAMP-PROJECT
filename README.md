@@ -49,28 +49,6 @@ source ~/.bashrc
 
 ---
 
-## Project Structure
-
-```
-ros2_ws/
-└── src/
-    └── obstacle_avoider/
-        ├── obstacle_avoider/
-        │   ├── __init__.py
-        │   └── avoider_node.py       ← main logic lives here
-        ├── launch/
-        │   └── avoider.launch.py     ← launch with configurable params
-        ├── scripts/
-        │   └── run_avoider.py        ← convenience build+run script
-        ├── resource/
-        │   └── obstacle_avoider      ← ament index marker (do not delete)
-        ├── package.xml
-        ├── setup.py
-        ├── setup.cfg
-        └── README.md
-```
-
----
 
 ## Build
 
@@ -147,43 +125,6 @@ While running you will see lines like:
 
 ---
 
-## VS Code Setup
-
-### Recommended extensions
-
-- **ROS** (`ms-iot.vscode-ros`) — syntax highlighting, node explorer, topic echo
-- **Python** (`ms-python.python`) — linting and IntelliSense
-- **C/C++** (`ms-vscode.cpptools`) — useful if you extend the project to C++ later
-
-### Python IntelliSense for ROS2
-
-Create `.vscode/settings.json` in your workspace root:
-
-```json
-{
-    "python.autoComplete.extraPaths": [
-        "/opt/ros/humble/lib/python3.10/site-packages",
-        "/opt/ros/humble/local/lib/python3.10/dist-packages"
-    ],
-    "python.analysis.extraPaths": [
-        "/opt/ros/humble/lib/python3.10/site-packages",
-        "/opt/ros/humble/local/lib/python3.10/dist-packages"
-    ]
-}
-```
-
-### Launch ROS2 terminal inside VS Code
-
-Open a new terminal in VS Code and run:
-
-```bash
-source /opt/ros/humble/setup.bash
-source ~/ros2_ws/install/setup.bash
-```
-
-Or add this to your `~/.bashrc` permanently so every terminal is ready.
-
----
 
 ## Troubleshooting
 
